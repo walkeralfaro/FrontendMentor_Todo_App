@@ -1,0 +1,13 @@
+.todo_container{
+  display: flex;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.todo_text {
+  color: purple;
+}
+
+.todo_text_completed {
+  text-decoration-line:line-through;
+}
