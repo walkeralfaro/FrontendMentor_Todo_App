@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin mobile {
+    @media (min-width: #{v.$mobile}) {
+        @content;
+    }
+}
+  
+@mixin desktop {
+    @media (min-width: #{v.$desktop}) {
+        @content;
+    }
+}
+
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
