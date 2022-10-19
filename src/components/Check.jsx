@@ -1,4 +1,4 @@
-import styles from "../styles/Check.module.css"
+import styles from "../scss/components/Check.module.scss";
 import imgCheck from "../images/icon-check.svg";
 
 export const Check = ({ isCompleted, handleCheck }) => {

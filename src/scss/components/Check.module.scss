@@ -1,5 +1,7 @@
+@use '../base/variables' as v;
+
 .todo_complete_input {
-  background-color: black;
+  background-color: v.$Bright_Blue;
   height: 20px;
   width: 20px;
   border-radius: 50%;

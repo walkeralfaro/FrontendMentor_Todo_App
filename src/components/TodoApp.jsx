@@ -10,7 +10,7 @@ export const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [itemsLeft, setItemsLeft] = useState(null);
   const [filterState, setFilterState] = useState(true);
-  const [allFilter, setAllFilter] = useState(true)
+  const [allFilter, setAllFilter] = useState(true);
 
   useEffect(() => {
     const itemsWithFalseState = todos.filter( (todo) => todo.completed === false ).length;

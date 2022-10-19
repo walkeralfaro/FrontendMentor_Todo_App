@@ -1,4 +1,4 @@
-import styles from "../styles/TodoInput.module.css";
+import styles from "../scss/components/TodoInput.module.scss";
 import { useState } from "react";
 import { Check } from "./Check";
 

@@ -1,9 +1,8 @@
 
 import imgCross from "../images/icon-cross.svg";
-import styles from "../styles/Todo.module.css";
+import styles from "../scss/components/Todo.module.scss";
 import { Check } from "./Check";
 import clsx from 'clsx';
-
 
 export const Todo = ({ id, text, changeStateTodo, deleteTodo, completed, innerRef, draggableProvided  }) => {
 
