@@ -1,14 +1,24 @@
 import styles from "../scss/components/Check.module.scss";
-import imgCheck from "../images/icon-check.svg";
+import clsx from "clsx";
 
 export const Check = ({ isCompleted, handleCheck }) => {
 
+  const checkStyles = clsx ({
+    [styles.check]: true,
+    [styles.check_hover]: !isCompleted,
+    [styles.check_completed]: isCompleted
+  })
+
+  const imgCheckStyles = clsx ({
+    [styles.imgCheck]:isCompleted,
+  })
+
   return (
     <div
-      className={styles.todo_complete_input}
+      className={checkStyles}
       onClick={handleCheck}
     >
-      { isCompleted ? <img src={imgCheck} alt="image_check"/> : null }
+      <div className={imgCheckStyles}></div>
     </div>
   )
 }

@@ -1,0 +1,31 @@
+@use '../base/variables' as v;
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_h1{
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  padding-top: 1rem;
+}
+
+.header_theme {
+  background-color: red;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lightTheme {
+  background-image: url('../../images/icon-sun.svg');
+  width: 4rem;
+  height: 4rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.darkTheme {
+  background-image: url('../../images/icon-moon.svg');
+}

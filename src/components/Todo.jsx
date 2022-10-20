@@ -18,7 +18,6 @@ export const Todo = ({ id, text, changeStateTodo, deleteTodo, completed, innerRe
       {...draggableProvided.dragHandleProps}
       ref={innerRef}
     >
-
       <Check handleCheck={ () => changeStateTodo(id) } isCompleted={completed} />
 
       <div
