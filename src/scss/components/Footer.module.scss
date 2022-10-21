@@ -1,0 +1,17 @@
+
+@use '../base/variables' as *;
+
+.attribution {
+  height: 3vh;
+  width: inherit;
+  text-align: center;
+  font-size: 1rem;
+  color: $Dark_Grayish_Blue;
+
+  a {
+    text-decoration: none;
+    color: $Bright_Blue;
+    font-weight: bold;
+
+  }
+}

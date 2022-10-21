@@ -1,0 +1,22 @@
+.container_app {
+  width: 95%;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.flex_app {
+  height: 100%;
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_app {
+  width: 100%;
+  min-width: 34rem;
+  max-width: 45rem;
+  height: 39rem;
+  padding: 3rem;
+  border-radius: 3rem;
+}

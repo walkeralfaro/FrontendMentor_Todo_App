@@ -1,19 +1,35 @@
+import { createContext, useState } from 'react';
+import { Footer } from './components/Footer';
+import { Header } from './components/Header';
+import { TodoApp } from './components/TodoApp';
+import styles from './scss/components/App.module.scss';
 
-import { useState } from 'react';
-import { Header } from './components/Header'
-import { TodoApp } from './components/TodoApp'
+export const ThemeContext = createContext(null);
 
-export const App = () => {
-  const [theme, setTheme] = useState(true);
+const App = () => {
+
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light") );
+  }
 
   return (
-    <>
-      <Header 
-        changeTheme={() => setTheme(!theme)}
-        theme={theme}
-      />
-      <TodoApp />
-    
-    </>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <main className={styles.container_app}>
+        <div className={styles.flex_app}>
+          <div className={styles.card_app}>
+
+          <Header changeTheme={toggleTheme} theme={theme}/>
+          <TodoApp />
+
+          </div>
+        </div>
+        <Footer />
+      </main>
+
+    </ThemeContext.Provider>
   )
 }
+
+export default App;
