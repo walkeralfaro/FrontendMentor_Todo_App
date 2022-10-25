@@ -1,11 +1,11 @@
-@use '../base/variables' as v;
+@use '../base/variables' as *;
 
 .check {
   width: 2rem;
   height: 2rem;
 
   border-radius: 50%;
-  border: 1px solid v.$Very_Light_Grayish_Blue;
+  border: 1px solid $Very_Light_Grayish_Blue;
 
   cursor: pointer;
   user-select: none;
@@ -14,15 +14,15 @@
 .check_hover {
   &:hover {
     background: 
-      linear-gradient(v.$LightTheme_Background, v.$LightTheme_Background) padding-box,
-      v.$Check_Background border-box;
+      linear-gradient($LightTheme_Card_Background, $LightTheme_Card_Background) padding-box,
+      $Check_Background border-box;
     border: 1px solid transparent;
   }
 }
 
 .check_completed {
   border: none;
-  background: v.$Check_Background;
+  background: $Check_Background;
 }
 
 .imgCheck {

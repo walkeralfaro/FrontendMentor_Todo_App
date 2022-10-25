@@ -1,22 +1,37 @@
-.container_app {
-  width: 95%;
-  max-width: 144rem;
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.container_light {
+  max-width: $desktop;
   margin: 0 auto;
+
+  background-image: $Light_Background_Mobile_Image;
+  background-repeat: no-repeat;
+  background-color: $Very_Light_Grayish_Blue;
+
+  @include mobile {
+    background-image: $Light_Background_Desktop_Image;
+  }
+}
+
+.container_dark {
+  background-image: $Dark_Background_Mobile_Image;
+  background-color: $Very_Dark_Blue;
+
+  @include mobile {
+    background-image: $Dark_Background_Desktop_Image;
+  }
 }
 
 .flex_app {
   height: 100%;
   min-height: 97vh;
+  
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .card_app {
-  width: 100%;
-  min-width: 34rem;
-  max-width: 45rem;
-  height: 39rem;
-  padding: 3rem;
-  border-radius: 3rem;
+  width: 45rem;
+  padding: 1.5rem 2rem;
 }

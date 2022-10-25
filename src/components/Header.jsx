@@ -10,7 +10,7 @@ export const Header = ({ changeTheme }) => {
 
   const header_theme_icon = clsx({
     [styles.icon_light_theme]: true,
-    [styles.icon_dark_theme]: (themeContext.theme==='dark')
+    [styles.icon_dark_theme]: (themeContext.theme === 'dark')
   });
 
  

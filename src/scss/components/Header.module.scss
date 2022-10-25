@@ -10,22 +10,23 @@
   text-transform: uppercase;
   letter-spacing: 1rem;
   padding-top: 1rem;
+  color: white;
 }
 
 .header_theme {
-  background-color: red;
   cursor: pointer;
   user-select: none;
 }
 
 .icon_light_theme {
-  background-image: url('../../images/icon-sun.svg');
-  width: 4rem;
-  height: 4rem;
+  background-image: url('../../images/icon-moon.svg');
+  background-size: 2rem;
+  width: 2rem;
+  height: 2rem;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .icon_dark_theme {
-  background-image: url('../../images/icon-moon.svg');
+  background-image: url('../../images/icon-sun.svg');
 }

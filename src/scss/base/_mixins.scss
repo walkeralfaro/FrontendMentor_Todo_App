@@ -1,14 +1,14 @@
-@use 'variables' as v;
+@use 'variables' as *;
 
 /** Media Queries **/
 @mixin mobile {
-    @media (min-width: #{v.$mobile}) {
+    @media (min-width: $mobile) {
         @content;
     }
 }
   
 @mixin desktop {
-    @media (min-width: #{v.$desktop}) {
+    @media (min-width: #{$desktop}) {
         @content;
     }
 }

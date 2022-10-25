@@ -4,6 +4,7 @@ import { Todo } from "./Todo";
 import { TodoInput } from "./TodoInput";
 import { reorder } from "../functions/Reorder";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import styles from "../scss/components/TodoApp.module.scss";
 
 export const TodoApp = () => {
 
@@ -104,16 +105,17 @@ export const TodoApp = () => {
 
         </Droppable>
 
-        </DragDropContext>
-        <Features
-          itemsLeft={itemsLeft}
-          setAllFilter={setAllFilter}
-          setFilterState={setFilterState}
-          deleteCompletedTodos={deleteCompletedTodos}
-        />
+      </DragDropContext>
+
+      <Features
+        itemsLeft={itemsLeft}
+        setAllFilter={setAllFilter}
+        setFilterState={setFilterState}
+        deleteCompletedTodos={deleteCompletedTodos}
+      />
+
+      <p className={styles.advice_dnd}>Drag and drop to reorder list</p>
     
     </>
-
-
   )
 }

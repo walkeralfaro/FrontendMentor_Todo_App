@@ -1,0 +1,46 @@
+@use '../base/variables' as *;
+
+
+.features_aditional_light {
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 1.5rem;
+
+  background-color: $LightTheme_Card_Background;
+
+
+
+}
+
+.features_aditional_dark {
+
+}
+
+.features_current_light {
+
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: $LightTheme_Card_Background;
+  border-radius: .5rem;
+
+  button {
+
+    padding: 1rem;
+    color: $Dark_Grayish_Blue;
+
+    &:hover {
+      color: $Very_Dark_Grayish_Blue;
+    }
+
+  }
+
+}
+
+.features_current_dark {
+
+}
