@@ -1,23 +1,52 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
+.todo_features_container {
+  position: relative;
+}
 
+// Button: Clear Completed
+// Text: Items Left
 .features_aditional_light {
 
   display: flex;
   justify-content: space-between;
 
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  padding: 1.5rem 1rem;
 
+  color: $Dark_Grayish_Blue;
   background-color: $LightTheme_Card_Background;
 
+  border-radius: 0px 0px 5px 5px;
 
+  button {
 
+    color: $Dark_Grayish_Blue;
+
+    &:hover {
+      color: $Very_Dark_Grayish_Blue;
+    }
+  }
 }
 
 .features_aditional_dark {
 
+  background-color: $DarkTheme_Card_Background;
+
+    button {
+
+    color: $Dark_Grayish_Blue;
+    
+    &:hover {
+      color: $Light_Grayish_Blue;
+    }
+  }
 }
 
+
+
+// Buttons: All | Active | Completed
 .features_current_light {
 
   margin-top: 2rem;
@@ -28,19 +57,50 @@
   background-color: $LightTheme_Card_Background;
   border-radius: .5rem;
 
+  @include mobile {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    margin: 0;
+
+    font-size: 1.4rem;
+
+    background-color: transparent;
+  }
+
   button {
 
     padding: 1rem;
     color: $Dark_Grayish_Blue;
 
+    @include mobile {
+      padding: 1rem .5rem;
+    }
+
     &:hover {
       color: $Very_Dark_Grayish_Blue;
     }
-
+    
+    &.button_actived {
+      color: $Bright_Blue;
+    }
   }
-
 }
 
 .features_current_dark {
 
+  background-color: $DarkTheme_Card_Background;
+
+  button {
+
+    &:hover {
+      color: $Light_Grayish_Blue;
+    }
+
+    &.button_actived {
+      color: $Bright_Blue;
+    }
+  }
 }

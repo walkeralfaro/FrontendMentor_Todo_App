@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { ThemeContext } from "../App";
 import styles from '../scss/components/Features.module.scss';
 
-export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteCompletedTodos }) => {
+export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteCompletedTodos, filterState, allFilter }) => {
 
   const themeContext = useContext(ThemeContext);
 
@@ -17,11 +17,27 @@ export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteComple
     [styles.features_current_dark]: themeContext.theme === 'dark',
   })
 
+  // Logic feature pressed --start
+  const all_button = allFilter;
+  const active_button = (!allFilter && !filterState);
+  const completed_button = (!allFilter && filterState);
 
+  const all_pressed = clsx ({
+    [styles.button_actived]: all_button,
+  })
+
+  const active_pressed = clsx ({
+    [styles.button_actived]: active_button,
+  })
+
+  const completed_pressed = clsx ({
+    [styles.button_actived]: completed_button,
+  })
+  // Logic feature pressed --end
 
   return (
     
-    <>
+    <div className={styles.todo_features_container}>
       <div className={todo_features_aditional}>
 
         <p>{itemsLeft} Items Left</p>
@@ -31,11 +47,11 @@ export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteComple
         </button>
         
       </div>
-
-
+      
       <div className={todo_features_currentState}>
         <button
           onClick={() => setAllFilter(true)}
+          className={all_pressed}
         >
           All
         </button>
@@ -43,6 +59,7 @@ export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteComple
           onClick={() => {
             setAllFilter(false);
             setFilterState(false)}}
+          className={active_pressed}
         >
           Active
         </button>
@@ -50,12 +67,13 @@ export const Features = ({ itemsLeft, setAllFilter, setFilterState, deleteComple
           onClick={() => {
             setAllFilter(false);
             setFilterState(true)}}
+          className={completed_pressed}
         >
           Completed
         </button>
       </div>
     
-    </>
+    </div>
 
 
 

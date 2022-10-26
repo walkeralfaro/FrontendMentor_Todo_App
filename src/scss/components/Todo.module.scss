@@ -1,17 +1,58 @@
-@use '../base/variables' as v;
+@use '../base/variables' as *;
 
-.todo_container{
-  background-color: v.$Very_Dark_Desaturated_Blue;
-
+.todo_container_light {
   display: flex;
-  border: 1px solid black;
-  padding: 5px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $LightTheme_Card_Background;
+  border-bottom: 1px solid $Very_Light_Grayish_Blue;
+  padding: 1rem;
 }
 
+.todo_container_dark {
+  background-color: $DarkTheme_Card_Background;
+  border-bottom: 1px solid $Very_Dark_Grayish_Blue;
+}
+
+// Text styles
 .todo_text {
-  color: purple;
+  width: 100%;
+  color: $Very_Dark_Grayish_Blue;
+  padding-top: .8rem;
+  cursor: pointer;
+}
+
+.todo_text_dark {
+  color: $Light_Grayish_Blue;
 }
 
 .todo_text_completed {
+  color: $Light_Grayish_Blue;
   text-decoration-line:line-through;
+} 
+
+.todo_text_completed_dark {
+  color: $Dark_Grayish_Blue;
+} 
+//*****************************
+
+.todo_delete {
+  
+
+  cursor: pointer;
+  user-select: none;
+  margin: 0 1rem;
+
+}
+
+.imgCross {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  background-image: url('../../images/icon-cross.svg');
+  background-size:1.6rem;
+  background-repeat: no-repeat;
+  background-position: center;
 }

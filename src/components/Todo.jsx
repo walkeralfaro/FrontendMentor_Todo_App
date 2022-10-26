@@ -1,19 +1,28 @@
-
-import imgCross from "../images/icon-cross.svg";
 import styles from "../scss/components/Todo.module.scss";
 import { Check } from "./Check";
 import clsx from 'clsx';
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 
 export const Todo = ({ id, text, changeStateTodo, deleteTodo, completed, innerRef, draggableProvided  }) => {
 
+  const themeContext = useContext(ThemeContext);
+
+  const todo_container = clsx({
+    [styles.todo_container_light]: true,
+    [styles.todo_container_dark]: (themeContext.theme === 'dark'),
+  })
+
   const textStyles = clsx({
     [styles.todo_text]: true,
+    [styles.todo_text_dark]: (themeContext.theme === 'dark'),
     [styles.todo_text_completed]: completed,
+    [styles.todo_text_completed_dark]: (completed && themeContext.theme === 'dark')
   })
 
   return (
     <div 
-      className={styles.todo_container}
+      className={todo_container}
       {...draggableProvided.draggableProps}
       {...draggableProvided.dragHandleProps}
       ref={innerRef}
@@ -32,7 +41,7 @@ export const Todo = ({ id, text, changeStateTodo, deleteTodo, completed, innerRe
         className={styles.todo_delete}
         onClick={ () =>  {deleteTodo(id)} }
       >
-        <img src={ imgCross } alt="delete_todo" />
+        <div className={styles.imgCross}></div>
       </div>
 
     </div>

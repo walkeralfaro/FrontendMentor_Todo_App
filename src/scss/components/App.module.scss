@@ -6,11 +6,13 @@
   margin: 0 auto;
 
   background-image: $Light_Background_Mobile_Image;
+  background-size: contain;
   background-repeat: no-repeat;
   background-color: $Very_Light_Grayish_Blue;
 
   @include mobile {
     background-image: $Light_Background_Desktop_Image;
+    background-size:inherit;
   }
 }
 
@@ -32,6 +34,6 @@
 }
 
 .card_app {
-  width: 45rem;
+  width: 54rem;
   padding: 1.5rem 2rem;
 }

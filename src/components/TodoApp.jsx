@@ -109,9 +109,13 @@ export const TodoApp = () => {
 
       <Features
         itemsLeft={itemsLeft}
+        deleteCompletedTodos={deleteCompletedTodos}
+
         setAllFilter={setAllFilter}
         setFilterState={setFilterState}
-        deleteCompletedTodos={deleteCompletedTodos}
+
+        filterState={filterState}
+        allFilter={allFilter}
       />
 
       <p className={styles.advice_dnd}>Drag and drop to reorder list</p>

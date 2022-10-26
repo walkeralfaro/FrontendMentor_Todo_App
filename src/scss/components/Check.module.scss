@@ -4,6 +4,9 @@
   width: 2rem;
   height: 2rem;
 
+  // margin: 0 .6rem;
+  margin-left: 1rem;
+
   border-radius: 50%;
   border: 1px solid $Very_Light_Grayish_Blue;
 
@@ -25,10 +28,12 @@
   background: $Check_Background;
 }
 
-.imgCheck {
+.imgCheck_no {
   width: 2rem;
   height: 2rem;
+}
 
+.imgCheck {
   background-image: url('../../images/icon-check.svg');
   background-size:1rem;
   background-repeat: no-repeat;
