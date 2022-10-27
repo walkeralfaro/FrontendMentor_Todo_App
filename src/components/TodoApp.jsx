@@ -5,6 +5,7 @@ import { TodoInput } from "./TodoInput";
 import { reorder } from "../functions/Reorder";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import styles from "../scss/components/TodoApp.module.scss";
+import { data } from "../../public/data";
 
 export const TodoApp = () => {
 
@@ -12,6 +13,10 @@ export const TodoApp = () => {
   const [itemsLeft, setItemsLeft] = useState(null);
   const [filterState, setFilterState] = useState(true);
   const [allFilter, setAllFilter] = useState(true);
+
+  useEffect(() => {
+    setTodos(data);
+  }, [])
 
   useEffect(() => {
     const itemsWithFalseState = todos.filter( (todo) => todo.completed === false ).length;
@@ -71,7 +76,7 @@ export const TodoApp = () => {
             <div 
               ref={droppableProvided.innerRef}
               {...droppableProvided.droppableProps}
-              className="todo_list_container"
+              className={styles.todo_list_container}
             >
               {
                 todos.map( (todo, index) => 

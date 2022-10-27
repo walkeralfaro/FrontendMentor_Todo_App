@@ -20,6 +20,7 @@ $Check_Background: linear-gradient( to right, hsl(192, 100%, 67%) , hsl(280, 87%
 $Very_Light_Gray: hsl(0, 0%, 98%);
 $Very_Light_Grayish_Blue: hsl(236, 33%, 92%);
 $Light_Grayish_Blue: hsl(233, 11%, 84%);
+$Background_body_light: hsl(0,0, 250%);
 
 //  Dark Theme
 $Very_Dark_Blue: hsl(235, 21%, 11%);
@@ -30,7 +31,7 @@ $Very_Dark_Grayish_Blue: hsl(237, 14%, 26%);
 
 
 // Variables themes
-$LightTheme_Card_Background: $Very_Light_Gray;
+$LightTheme_Card_Background: white;
 $DarkTheme_Card_Background: $Very_Dark_Desaturated_Blue;
 
 $Dark_Background_Desktop_Image: url('../../images/bg-desktop-dark.jpg');
