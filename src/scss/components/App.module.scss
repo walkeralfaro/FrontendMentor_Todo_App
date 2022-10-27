@@ -2,17 +2,23 @@
 @use '../base/mixins' as *;
 
 .container_light {
-  max-width: $desktop;
-  margin: 0 auto;
+  // max-width: $desktop;
+  // max-width: 100%;
+  // margin: 0 auto;
 
   background-image: $Light_Background_Mobile_Image;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: $Very_Light_Grayish_Blue;
+  background-position-x: center;
 
   @include mobile {
     background-image: $Light_Background_Desktop_Image;
-    background-size:inherit;
+    background-size: auto;
+  }
+
+  @include desktop {
+    background-size: contain;
   }
 }
 

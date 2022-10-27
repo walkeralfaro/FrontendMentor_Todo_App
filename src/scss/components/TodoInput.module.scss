@@ -1,6 +1,48 @@
+@use '../base/variables' as *;
 
 .todo_form {
   display: flex;
-  border: 1px solid black;
-  padding: 5px;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $LightTheme_Card_Background;
+  padding: 1rem;
+
+  border-radius: 5px;
+
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.todo_form_dark {
+  background-color: $DarkTheme_Card_Background;
+}
+
+.todo_input_text {
+  width: 100%;
+
+  font-size: 1.6rem;
+
+  caret-color: $Bright_Blue;
+  padding-bottom: .3rem;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: $Very_Dark_Grayish_Blue;
+  padding-top: .8rem;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $Light_Grayish_Blue;
+  }
+}
+
+.todo_input_text_dark {
+  color: $Light_Grayish_Blue;
+
+  &::placeholder {
+    color: $Dark_Grayish_Blue;
+  }
 }

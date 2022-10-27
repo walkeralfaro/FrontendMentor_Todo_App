@@ -1,10 +1,25 @@
 import styles from "../scss/components/TodoInput.module.scss";
 import { useState } from "react";
 import { Check } from "./Check";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
+import clsx from "clsx";
 
 export const TodoInput = ({ sendNewTodo }) => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [input, setInput] = useState("");
+
+  const themeContext = useContext(ThemeContext);
+
+  const todo_input_container = clsx ({
+    [styles.todo_form]: true,
+    [styles.todo_form_dark]: (themeContext.theme === 'dark'),
+  })  
+
+  const todo_input_text = clsx ({
+    [styles.todo_input_text]: true,
+    [styles.todo_input_text_dark]: (themeContext.theme === 'dark'),
+  })
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,13 +47,13 @@ export const TodoInput = ({ sendNewTodo }) => {
 
   return (
     <form 
-      className={styles.todo_form}
+      className={todo_input_container}
       onSubmit={handleSubmit}
     >
       <Check handleCheck={handleCheck} isCompleted={isCompleted} />
       <input
         type="text"
-        className={styles.todo_text_input}
+        className={todo_input_text}
         placeholder="Create a new todo..."
         onChange={handleChangeInputText}
         value={input}

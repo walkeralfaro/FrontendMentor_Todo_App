@@ -14,12 +14,24 @@
   user-select: none;
 }
 
+.check_dark {
+  border: 1px solid $Very_Dark_Grayish_Blue;
+}
+
 .check_hover {
   &:hover {
     background: 
       linear-gradient($LightTheme_Card_Background, $LightTheme_Card_Background) padding-box,
       $Check_Background border-box;
     border: 1px solid transparent;
+  }
+}
+
+.check_hover_dark {
+  &:hover {
+    background: 
+    linear-gradient($DarkTheme_Card_Background, $DarkTheme_Card_Background) padding-box,
+    $Check_Background border-box;
   }
 }
 
