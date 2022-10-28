@@ -1,14 +1,21 @@
 @use '../base/variables' as *;
+@use '../base/mixins' as *;
 
 .todo_container_light {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
 
   background-color: $LightTheme_Card_Background;
   border-bottom: 1px solid $Very_Light_Grayish_Blue;
-  padding: 1rem;
+
+  padding: 1.4rem;
+
+  @include mobile {
+    padding: 1.8rem;
+    gap: 2rem;
+  }
 }
 
 .todo_container_dark {
@@ -22,6 +29,10 @@
   color: $Very_Dark_Grayish_Blue;
   padding-top: .8rem;
   cursor: pointer;
+
+  @include mobile {
+    font-size: 1.8rem;
+  }
 }
 
 .todo_text_dark {
@@ -39,20 +50,23 @@
 //*****************************
 
 .todo_delete {
-  
-
   cursor: pointer;
   user-select: none;
   margin: 0 1rem;
-
 }
 
 .imgCross {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.2rem;
+  height: 1.2rem;
 
   background-image: url('../../images/icon-cross.svg');
-  background-size:1.6rem;
+  background-size:1.2rem;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include mobile {
+    width: 1.6rem;
+    height: 1.6rem;
+    background-size: 1.6rem;
+  }
 }

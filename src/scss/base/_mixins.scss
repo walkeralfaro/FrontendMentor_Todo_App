@@ -8,7 +8,7 @@
 }
   
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: $desktop) {
         @content;
     }
 }

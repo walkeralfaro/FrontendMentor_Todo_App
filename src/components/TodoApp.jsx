@@ -5,7 +5,7 @@ import { TodoInput } from "./TodoInput";
 import { reorder } from "../functions/Reorder";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import styles from "../scss/components/TodoApp.module.scss";
-import { data } from "../../public/data";
+import { data } from "/data";
 
 export const TodoApp = () => {
 
